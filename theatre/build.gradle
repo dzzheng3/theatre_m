@@ -24,9 +24,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     kapt presentationKaptDependencies
     implementation presentationDependencies
     testImplementation presentationTestDependencies
     androidTestImplementation presentationInstrumentationTestDependencies
+    implementation project(':domain')
 }
