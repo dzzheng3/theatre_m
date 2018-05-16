@@ -6,8 +6,8 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 @Module
-internal abstract class ActivitiesModule{
+internal abstract class ActivitiesModule {
     @StartupScope
     @ContributesAndroidInjector(modules = [StartupModule::class])
-    internal abstract fun contributeStartupActivity():StartupActivity
+    internal abstract fun contributeStartupActivity(): StartupActivity
 }

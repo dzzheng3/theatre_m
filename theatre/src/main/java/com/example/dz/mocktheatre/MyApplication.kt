@@ -8,7 +8,6 @@ import io.reactivex.plugins.RxJavaPlugins
 import java.io.IOException
 import java.net.SocketException
 
-
 class MyApplication : DaggerApplication() {
     companion object {
         private const val LOG_TAG = "Theatre"

@@ -8,13 +8,15 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.plusAssign
 
 abstract class BaseAnroidViewModel : AndroidViewModel {
-    protected val context:Context
+    protected val context: Context
+
     constructor(application: Application) : super(application) {
         context = application
     }
+
     private val disposables = CompositeDisposable()
-    fun addDisposable(disposable: Disposable){
-        disposables+=disposable
+    fun addDisposable(disposable: Disposable) {
+        disposables += disposable
     }
 
     override fun onCleared() {
