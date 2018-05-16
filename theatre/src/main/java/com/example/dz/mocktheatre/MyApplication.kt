@@ -8,6 +8,7 @@ import io.reactivex.plugins.RxJavaPlugins
 import java.io.IOException
 import java.net.SocketException
 
+
 class MyApplication : DaggerApplication() {
     companion object {
         private const val LOG_TAG = "Theatre"
@@ -18,6 +19,12 @@ class MyApplication : DaggerApplication() {
         Stetho.initializeWithDefaults(this)
         setupReactiveX()
     }
+
+    // can triger multiDex in project gradle multiDexEnabled true
+//    override fun attachBaseContext(base: Context) {
+//        super.attachBaseContext(base)
+//        MultiDex.install(this)
+//    }
 
     private fun setupReactiveX() {
         // Error handling in RxJava
