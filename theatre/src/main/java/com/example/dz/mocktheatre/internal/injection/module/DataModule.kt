@@ -42,8 +42,7 @@ internal class DataModule {
     @Provides
     internal fun provideEventTypeRepository(
         eventTypeLocalDataSource: EventTypeLocalDataSource,
-        eventTypeRemoteDataSource: EventTypeRemoteDataSource,
-        eventTypeMapper: EventTypeMapper
+        eventTypeRemoteDataSource: EventTypeRemoteDataSource
     ): EventTypeRepository {
         return EventTypeRepository(eventTypeLocalDataSource, eventTypeRemoteDataSource, EventTypeMapper())
     }

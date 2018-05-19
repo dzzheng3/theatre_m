@@ -1,10 +1,10 @@
 package com.example.dz.mocktheatre.home
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import com.example.dz.mocktheatre.R
+import dagger.android.support.DaggerAppCompatActivity
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : DaggerAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

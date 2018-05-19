@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MockTheatre</string>
+    <string name="unknown_error">unknown_error</string>
 </resources>

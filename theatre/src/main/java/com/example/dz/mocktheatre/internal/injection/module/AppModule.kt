@@ -4,6 +4,7 @@ import android.content.Context
 import com.example.domain.Schedulers
 import com.example.dz.mocktheatre.internal.injection.DaggerApplication
 import com.example.dz.mocktheatre.internal.scheduler.AppSchedulers
+import com.example.dz.mocktheatre.navigation.Navigator
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -17,4 +18,8 @@ internal class AppModule {
     @Singleton
     @Provides
     internal fun provideScedulers(): Schedulers = AppSchedulers()
+
+    @Singleton
+    @Provides
+    internal fun provideNavigator(): Navigator = Navigator()
 }
