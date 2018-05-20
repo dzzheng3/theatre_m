@@ -4,7 +4,10 @@ import com.example.data.BuildConfig
 import com.example.data.remote.api.util.AuthenticatorInterceptor
 import com.example.data.remote.api.util.MoshiConverters
 import com.example.data.remote.api.util.RetryAfterInterceptor
+import com.example.data.remote.model.EventRemoteModel
 import com.example.data.remote.model.EventTypeRemoteModel
+import com.example.data.remote.model.RatingRemoteModel
+import com.example.data.remote.model.VenueRemoteModel
 import com.serjltt.moshi.adapters.Wrapped
 import com.squareup.moshi.KotlinJsonAdapterFactory
 import com.squareup.moshi.Moshi
@@ -45,7 +48,11 @@ class TheatreApi(baseUrl: String) : TheatreService {
 
     override fun getEventTypes(): Observable<List<EventTypeRemoteModel>> = theatreService.getEventTypes()
 
-    override fun getEvents(type: Int): Observable<List<EventTypeRemoteModel>> = theatreService.getEvents(type)
+    override fun getEvents(type: Int): Observable<List<EventRemoteModel>> = theatreService.getEvents(type)
 
-    override fun getEvent(id: Int): Observable<EventTypeRemoteModel> = theatreService.getEvent(id)
+    override fun getEvent(id: Int): Observable<EventRemoteModel> = theatreService.getEvent(id)
+
+    override fun getVenue(id: Int): Observable<VenueRemoteModel> = theatreService.getVenue(id)
+
+    override fun getEventRating(event: Int): Observable<RatingRemoteModel> = theatreService.getEventRating(event)
 }

@@ -6,10 +6,12 @@ import android.arch.persistence.room.RoomDatabase
 import android.arch.persistence.room.TypeConverters
 import android.content.Context
 import com.example.data.local.dao.EventTypeDao
+import com.example.data.local.dao.VenueDao
 import com.example.data.local.model.EventTypeLocalModel
+import com.example.data.local.model.VenueLocalModel
 import com.example.data.local.util.Converters
 
-@Database(entities = [EventTypeLocalModel::class], version = 1, exportSchema = false)
+@Database(entities = [EventTypeLocalModel::class, VenueLocalModel::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class SystemDatabase : RoomDatabase() {
     companion object {
@@ -19,4 +21,5 @@ abstract class SystemDatabase : RoomDatabase() {
     }
 
     abstract fun eventTypeDao(): EventTypeDao
+    abstract fun venueDao(): VenueDao
 }
